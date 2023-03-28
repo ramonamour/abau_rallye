@@ -1,80 +1,65 @@
 #include <Arduino.h>
 
-const int threshold = 35;
 
 void setup() {
   Serial.begin(115200);
-  delay(1000);
-  Serial.println("ESP32 Touch Test");
+  // put your setup code here, to run once:
+  pinMode(13, OUTPUT);
 }
 
 void loop() {
-  delay(50);
+  // put your main code here, to run repeatedly: 
 
-  if(touchRead(12) >= 10 && touchRead(12) < 100) {
-    Serial.print("id12[");
-    Serial.print(touchRead(12));
-    Serial.print("]");
+  // if touch sensor on pin 4 is lower than a specific sensitive value
+  if(touchRead(4) < 40) {  
+    // do something, when touch is active
+    Serial.println("Sensor: 4, Number: 9");
   }
 
-  if(touchRead(13) >= 10 && touchRead(13) < 100) {
-    Serial.print("id13[");
-    Serial.print(touchRead(13));
-    Serial.print("]");
+  // if touch sensor on pin 4 is lower than a specific sensitive value
+  if(touchRead(2) < 40) {  
+    // do something, when touch is active
+    Serial.println("Sensor: 2, Number: 6");
   }
 
-  if(touchRead(14) >= 10 && touchRead(14) < 100) {
-    Serial.print("id14[");
-    Serial.print(touchRead(14));
-    Serial.print("]");
+  // if touch sensor on pin 4 is lower than a specific sensitive value
+  if(touchRead(15) < 40) {  
+    // do something, when touch is active
+    Serial.println("Sensor: 15, Number: 3");
   }
 
-  if(touchRead(27) >= 10 && touchRead(27) < 100) {
-    Serial.print("id27[");
-    Serial.print(touchRead(27));
-    Serial.print("]");
+  // if touch sensor on pin 4 is lower than a specific sensitive value
+  if(touchRead(32) < 40) {  
+    // do something, when touch is active
+    Serial.println("Sensor: 32, Number: 8");
+  }
+  // if touch sensor on pin 4 is lower than a specific sensitive value
+  if(touchRead(33) < 40) {  
+    // do something, when touch is active
+    Serial.println("Sensor: 33, Number: 5");
   }
 
-  if(touchRead(32) >= 10 && touchRead(32) < 100) {
-    Serial.print("id32[");
-    Serial.print(touchRead(32));
-    Serial.print("]");
+  // if touch sensor on pin 4 is lower than a specific sensitive value
+  if(touchRead(27) < 40) {  
+    // do something, when touch is active
+    Serial.println("Sensor: 27, Number: 2");
   }
 
-  if(touchRead(33) >= 10 && touchRead(33) < 100) {
-    Serial.print("id33[");
-    Serial.print(touchRead(33));
-    Serial.print("]");
+  // if touch sensor on pin 4 is lower than a specific sensitive value
+  if(touchRead(14) < 40) {  
+    // do something, when touch is active
+    Serial.println("Sensor: 14, Number: 7");
   }
 
-    if(touchRead(4) < 40) {
-    Serial.print("id4[");
-    Serial.print(touchRead(33));
-    Serial.print("]");
+  // if touch sensor on pin 4 is lower than a specific sensitive value
+  if(touchRead(12) < 40) {  
+    // do something, when touch is active
+    Serial.println("Sensor: 12, Number: 4");
   }
-
-
-  // if(touchRead(12) < 45) { 
-  //   Serial.println("id12");
-  // }
-
-  // if(touchRead(13) < threshold) { 
-  //   Serial.println("id13");
-  // }
-
-  // if(touchRead(14) < threshold) { 
-  //   Serial.println("id14");
-  // }
-
-  // if(touchRead(27) < threshold) { 
-  //   Serial.println("id27");
-  // }
-
-  // if(touchRead(33) < threshold) { 
-  //   Serial.println("id33");
-  // }
-
-  // if(touchRead(32) < threshold) { 
-  //   Serial.println("id32");
-  // }
+  
+  // if touch sensor on pin 4 is lower than a specific sensitive value
+  if(touchRead(13) < 40) {  
+    // do something, when touch is active
+    Serial.println("Sensor: 13, Number: 1");
+  }
 }
