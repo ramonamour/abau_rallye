@@ -17,10 +17,7 @@ function handleTouch14() {
 }
 
 function handleTouch13() {
-    document.querySelector(".container2").classList.add("show");
-    setTimeout(()=> {
-        document.querySelector(".container2").classList.remove("show");
-    }, 500)
+    document.querySelector("#input1").setAttribute('value', document.querySelector("#input1").getAttribute('value')+'1');
 }
 
 function handleTouch27() {
