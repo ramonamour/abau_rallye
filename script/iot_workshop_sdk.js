@@ -21,6 +21,7 @@ async function connectSerial() {
         const reader = decoder.readable.getReader();
 
         console.log("ESP ready!");
+        
         connectBtn.name("&#10003; Connected");
         handleLoaded();
 
